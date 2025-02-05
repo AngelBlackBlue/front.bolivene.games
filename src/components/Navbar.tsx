@@ -154,13 +154,13 @@ export const Navbar = () => {
               </AccordionItem>
               <AccordionItem value="item-2">
               <SheetClose asChild>
-                  <AccordionTrigger onClick={() => navigate("/")}>
-                    Home
+                  <AccordionTrigger onClick={() => navigate("/aboutUs")}>
+                    About Us
                   </AccordionTrigger>
                 </SheetClose>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>About Us</AccordionTrigger>
+                <AccordionTrigger>News</AccordionTrigger>
                 <AccordionContent>
                   Yes. It&apos;s animated by default, but you can disable it if
                   you prefer.
