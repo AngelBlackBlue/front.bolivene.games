@@ -1,7 +1,9 @@
 import Breadcumb from "@/components/BreadCumb";
 import { HomeBolivene } from "@/components/HomeBolivene";
-import FeatureAreaAboutUs from '../components/FeatureAreaAboutUs';
+import FeatureAreaAboutUs from "../components/FeatureAreaAboutUs";
 import TeamAreaAboutUs from "@/components/TeamAreaAboutUs";
+import CounterArea from "../components/CounterArea";
+import TournamentHistory from "@/components/TournamentHistory";
 
 const AboutUs = () => {
   return (
@@ -13,10 +15,16 @@ const AboutUs = () => {
         <HomeBolivene />
       </section>
       <section>
-        <FeatureAreaAboutUs/>
+        <FeatureAreaAboutUs />
       </section>
       <section>
-        <TeamAreaAboutUs/>
+        <TeamAreaAboutUs />
+      </section>
+      <section>
+        <CounterArea />
+      </section>
+      <section>
+        <TournamentHistory/>
       </section>
     </>
   );

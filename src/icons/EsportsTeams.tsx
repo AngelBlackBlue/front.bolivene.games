@@ -1,5 +1,5 @@
 import { SVGProps } from "react"
-const EsportsTeamsIcon = (props: SVGProps<SVGSVGElement>) => (
+const EsportsTeamsIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -11,6 +11,7 @@ const EsportsTeamsIcon = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 231 33.59"
     width="1em"
     height="1em"
+    className={className}
     {...props}
   >
     <path fill="#fff" d="M-226.15-1164.04 115.5 16.8" />

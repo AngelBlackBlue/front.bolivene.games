@@ -19,7 +19,7 @@ interface CardPersonalizadoProps {
 
 const CardPersonalizado: React.FC<CardPersonalizadoProps> = ({ icon: Icon, title, description }) => {
   return (
-    <Card className="text-center px-[30px] py-[20px] mb-[23px] flex flex-col bg-[#020013] items-center group hover:shadow-lg transition-shadow duration-300 border-none">
+    <Card className="text-center  px-[30px] py-0 mb:py-[20px] mb-[0px] md:mb-[20px] flex flex-col bg-[#020013] items-center group hover:shadow-lg transition-shadow duration-300 border-none">
       <CardHeader>
         <div className="w-[105px] h-[105px] ]  lg:w-[140px] lg:h-[140px] flex justify-center items-center text-center rounded-full transition-all duration-400 bg-[#2f2c43] group-hover:bg-[#f2003a] mb-7">
           <div className="flex justify-center items-center ">
