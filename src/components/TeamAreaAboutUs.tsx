@@ -16,7 +16,7 @@ import TeamAssassinIcon from "@/icons/TeamAssassin";
 import TeamGangsterIcon from "@/icons/TeamGangster";
 import TeamMashGamerIcon from "@/icons/TeamMashGamer";
 import TeamSoldierIcon from "@/icons/TeamSoldier";
-import avater from "@/assets/img/avater.webp";
+import avater from "@/assets/img/icon_game.png";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { SVGProps } from "react";

@@ -9,6 +9,7 @@ import {
 
 import img from "@/assets/img/tournament/tournament-1-1.jpg";
 import ButtonPlayStore from "./ButtonPlayStore";
+import { useTranslation } from "react-i18next";
 
 const images = [
   { id: 1, src: img, alt: "Imagen 1" },
@@ -19,6 +20,9 @@ const images = [
 ];
 
 export function TournamentArea() {
+  
+  const { t } = useTranslation();
+
   return (
     <div>
     
@@ -46,13 +50,11 @@ export function TournamentArea() {
         {/* Texto Informativo */}
         <div className="max-sm:hidden absolute z-10 mx-auto max-w-[580px] bg-[#220874] xl:top-60 lg:top-40 md:top-[200px] sm:top-44">
           <h3 className="md:px-12 md:py-9 px-8 py-5">
-            <a className="text-white lg:text-[40px] text-[30px] transition-all duration-1000 ease-in-out hover:text-[#f2003a]">
+            <a className="capitalize text-white lg:text-[40px] text-[30px] transition-all duration-1000 ease-in-out hover:text-[#f2003a]">
               Path of Destiny
             </a>
             <p className="lg:text-[20px] text-[16px] mb-[18px] text-white">
-              Immerse yourself in the vibrant universe of Path of Destiny, a
-              massively multiplayer online RPG (MMORPG) that will transport you
-              to a world full of action, strategy, and fantasy.
+              {t("immerseYourself")}
             </p>
            <ButtonPlayStore/>
            </h3>

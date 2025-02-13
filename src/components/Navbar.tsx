@@ -40,55 +40,66 @@ import { ButtonLogoutAuth0 } from "./ButtonLogoutAuth0";
 import { ButtonProfileAuth0 } from "./ButtonProfileAuth0";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
+import Lenguage from "./Lenguage";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const { isAuthenticated } = useAuth0();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className=" items-center w-full ">
       <div className="hidden md:flex justify-between ">
-        <nav className="flex lg:pl-[60px]  w-full h-32 text-lg bg-[#020013] transition-none hover:bg-none ">
+        <nav className=" flex lg:pl-[60px]  w-full h-32 text-lg bg-[#020013] transition-none hover:bg-none ">
           {/* Web */}
 
           <div className="flex items-center justify-center">
             <Button
-              className="text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] group"
+              className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] "
               onClick={() => navigate("/")}
             >
-              HOME
+              {t("home")}
             </Button>
           </div>
 
           <div className="flex items-center justify-center">
             <Button
-              className="uppercase text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] group"
+              className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] "
               onClick={() => navigate("/aboutUs")}
             >
-              About US
+              {t("about")}
             </Button>
           </div>
-       
+
+          <div className="flex items-center justify-center">
+            <Button
+              className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] group"
+              onClick={() => navigate("/games")}
+            >
+              {t("games")}
+            </Button>
+          </div>
 
           {/* NEWS */}
-          <NavigationMenu>
+          {/* <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className=" text-white transition-colors hover:text-[#f2003a] bg-[#020013] ">
                   NEWS
                 </NavigationMenuTrigger>
-                {/* <NavigationMenuContent>
+                <NavigationMenuContent>
               <NavigationMenuLink>Link</NavigationMenuLink>
-              </NavigationMenuContent> */}
+              </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
-          </NavigationMenu>
+          </NavigationMenu> */}
           {/* CONTACT */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className=" text-white transition-colors hover:text-[#f2003a] bg-[#020013] ">
-                  CONTACT
+                <NavigationMenuTrigger className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] bg-[#020013] ">
+                  {t("contact")}
                 </NavigationMenuTrigger>
                 {/* <NavigationMenuContent>
               <NavigationMenuLink>Link</NavigationMenuLink>
@@ -96,6 +107,8 @@ export const Navbar = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          {/* LENGUAGES */}
+          <div className="flex items-center pl-2 ">{<Lenguage />}</div>
         </nav>
 
         <div className="flex justify-center items-center gap-4 ">
@@ -114,7 +127,7 @@ export const Navbar = () => {
         </div>
       </div>
       {/* movil */}
-      <div className="md:hidden text-white flex justify-end items-center   ">
+      <div className="md:hidden text-white flex justify-end items-center pr-1  ">
         <Sheet key="side:left">
           <SheetTrigger>
             <MenuIcon className="bg-[#f2003a] size-14  p-3" />
@@ -148,30 +161,45 @@ export const Navbar = () => {
               <AccordionItem value="item-1">
                 <SheetClose asChild>
                   <AccordionTrigger onClick={() => navigate("/")}>
-                    Home
+                    {t("home")}
                   </AccordionTrigger>
                 </SheetClose>
               </AccordionItem>
               <AccordionItem value="item-2">
-              <SheetClose asChild>
+                <SheetClose asChild>
                   <AccordionTrigger onClick={() => navigate("/aboutUs")}>
-                    About Us
+                    {t("about")}
                   </AccordionTrigger>
                 </SheetClose>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>News</AccordionTrigger>
+                <SheetClose asChild>
+                  <AccordionTrigger onClick={() => navigate("/games")}>
+                    {t("games")}
+                  </AccordionTrigger>
+                </SheetClose>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>{t("contact")}</AccordionTrigger>
                 <AccordionContent>
                   Yes. It&apos;s animated by default, but you can disable it if
                   you prefer.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Contact Us</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It&apos;s animated by default, but you can disable it if
-                  you prefer.
-                </AccordionContent>
+              <AccordionItem value="item-5">
+     
+                  <AccordionTrigger>Lenguage</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="flex flex-col">
+                      <div>Ingles</div>
+                      Chino 
+                      Argentino
+                      Brasilero
+                      </div>
+
+             
+                  </AccordionContent>
+
               </AccordionItem>
             </Accordion>
           </SheetContent>

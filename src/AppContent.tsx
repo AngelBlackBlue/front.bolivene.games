@@ -9,6 +9,7 @@ import { AuthenticationGuard } from "./components/auth/AuthenticationGuard";
 import Error from "@/pages/Error";
 import { useAuth0 } from "@auth0/auth0-react";
 import AboutUs from "./pages/AboutUs";
+import Games from "./pages/Games";
 // import Test from "./pages/Test";
 
 export const AppContent = () => {
@@ -30,6 +31,7 @@ export const AppContent = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/games" element={<Games />} />
             <Route
               path="/profile"
               element={<AuthenticationGuard component={Profile} />}
