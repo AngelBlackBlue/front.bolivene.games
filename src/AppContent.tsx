@@ -1,15 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "@/pages/Home";
 import { Header } from "@/components/Header";
-import Preloader from "./pages/Preloader";
-import ScrollToTop from "./components/ScrollToTop";
-import Footer from "./components/Footer";
+import Preloader from "@/pages/Preloader";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import Profile from "@/pages/Profile";
 import { AuthenticationGuard } from "./components/auth/AuthenticationGuard";
 import Error from "@/pages/Error";
 import { useAuth0 } from "@auth0/auth0-react";
-import AboutUs from "./pages/AboutUs";
-import Games from "./pages/Games";
+import AboutUs from "@/pages/AboutUs";
+import Games from "@/pages/Games";
+import GameDetail from "@/pages/GameDetail";
 // import Test from "./pages/Test";
 
 export const AppContent = () => {
@@ -32,6 +33,7 @@ export const AppContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/games" element={<Games />} />
+            <Route path="/game/:gameId" element={<GameDetail />} />
             <Route
               path="/profile"
               element={<AuthenticationGuard component={Profile} />}

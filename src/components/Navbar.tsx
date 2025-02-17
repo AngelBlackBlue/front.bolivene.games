@@ -1,13 +1,13 @@
-import {
-  NavigationMenu,
-  // NavigationMenuContent,
-  // NavigationMenuIndicator,
-  NavigationMenuItem,
-  // NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  // NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+// import {
+//   NavigationMenu,
+//   // NavigationMenuContent,
+//   // NavigationMenuIndicator,
+//   NavigationMenuItem,
+//   // NavigationMenuLink,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+//   // NavigationMenuViewport,
+// } from "@/components/ui/navigation-menu";
 
 import MenuIcon from "@/icons/Menu";
 
@@ -81,32 +81,16 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* NEWS */}
-          {/* <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className=" text-white transition-colors hover:text-[#f2003a] bg-[#020013] ">
-                  NEWS
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-              </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu> */}
           {/* CONTACT */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] bg-[#020013] ">
-                  {t("contact")}
-                </NavigationMenuTrigger>
-                {/* <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-              </NavigationMenuContent> */}
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <div className="flex items-center justify-center">
+            <Button
+              className="uppercase px-2 lg:px-4 text-white transition-colors hover:text-[#f2003a] border-none bg-[#020013] hover:bg-[#020013] group"
+             
+            >
+             { t("contact")}
+            </Button>
+          </div>
+
           {/* LENGUAGES */}
           <div className="flex items-center pl-2 ">{<Lenguage />}</div>
         </nav>

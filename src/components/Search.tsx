@@ -11,11 +11,10 @@ import {
 const Search = () => {
   const lenguages = [
     {value : "All", label: "All"},
-    { value: "apple", label: "Apple" },
-    { value: "banana", label: "Banana" },
-    { value: "blueberry", label: "Blueberry" },
-    { value: "grapes", label: "Grapes" },
-    { value: "pineapple", label: "Pineapple" },
+    { value: "en", label: "English" },
+    { value: "es", label: "Spanish" },
+    { value: "pt", label: "Portuguese" },
+    { value: "zh", label: "Chinese" },
   ];
 
   return (
